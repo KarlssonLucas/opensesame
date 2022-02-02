@@ -42,9 +42,9 @@ const codeUsed = (request, response) => {
            if (error) {
                response.status(500).send(errorMsg("Internal server error"));
             } if (results.rowCount === 1) {
-                response.status(200).json(true);
+                response.send("<html><body style=background-color:green;></body></html>");
             } else {
-                response.status(400).json(false);
+                response.send("<html><body style=background-color:red;></body></html>");
             }
        }
     )
