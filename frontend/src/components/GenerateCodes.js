@@ -5,8 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const GenerateCodes = (props) => {
 
-    const [code, setCode] = useState("");
-
     const test = async () => {
         const requestOptions = {
             method: 'GET',

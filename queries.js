@@ -34,10 +34,10 @@ const getCodes = (request, response) => {
 
 const codeUsed = (request, response) => {
 
-    const otc = parseInt(request.params.code)
+    const otc = request.params.code.toString();
 
     client.query(
-      "UPDATE otc SET usage = usage - 1 WHERE otc = $1", [otc],
+      "UPDATE onetimecodes SET usages = usages - 1 WHERE otc = $1", [otc],
        (error, results) => {
            if (error) {
                response.status(500).send(errorMsg("Internal server error"));
@@ -51,7 +51,6 @@ const codeUsed = (request, response) => {
 }
 
 const addCode = (request, response) => {
-    console.log("hej")
     const usages = parseInt(request.params.usages);
     var current = new Date();
 
