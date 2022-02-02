@@ -1,0 +1,33 @@
+{
+  "name": "strecklista",
+  "version": "1.0.0",
+  "description": "Create-react-app with Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "heroku-postbuild": "npm install --legacy-peer-deps && cd strecklista && npm install --legacy-peer-deps && npm run build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.5.1",
+    "react": "^16.14.0"
+  },
+  "engines": {
+    "node": "^15.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlssonLucas/strecklista.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/KarlssonLucas/strecklista/issues"
+  },
+  "homepage": "http://karlssonlucas.github.io/strecklista"
+}
